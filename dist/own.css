@@ -1,0 +1,59 @@
+:root {
+    --primary-color: #42affa;
+    --secondary-color: #f92672;
+}
+
+div.reveal {
+    position: relative;
+}
+
+section#capgemini-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+section#capgemini-logo svg {
+    height: 4rem;
+}
+
+section#infoshare-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: .75rem 1.25rem;
+}
+
+section#infoshare-logo svg {
+    height: 2rem;
+}
+
+.reveal section .no-border {
+    border: 0;
+}
+
+.reveal section .no-margin {
+    margin: 0;
+}
+
+.reveal section .no-background {
+    background: none;
+    box-shadow: none;
+}
+
+.reveal section ul.no-margin-nor-bullet-points {
+    margin: 0;
+    list-style: none;
+}
+
+.reveal section .no-text-transform {
+    text-transform: none;
+}
+
+.reveal .primary-color {
+    color: var(--primary-color);
+}
+
+.reveal .secondary-color {
+    color: var(--secondary-color);
+}
