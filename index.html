@@ -19,25 +19,141 @@
 <div class="reveal">
     <div class="slides">
         <section>
-			<h1 class="no-text-transform secondary-color">Handling Code in&nbsp;the&nbsp;Fast&#8209;changing Technology&nbsp;World</h1>
-		</section>
-        <section>
-			<h4 class="no-text-transform">What I mean with</h4>
-			<h2 class="no-text-transform"><mark>handling&nbsp;code&nbsp;well</mark> is...</h2>
-			<h2 class="no-text-transform">...writing <mark>maintainable code</mark></h2>
-        </section>
-		<section>
-			<h4 class="no-text-transform">Let's rephrase the title:</h4>
-			<h2 class="no-text-transform secondary-color"><span style="text-decoration: line-through">Handling</span> Writing <mark>Maintainable</mark> Code in&nbsp;the&nbsp;Fast&#8209;changing Technology&nbsp;World</h2>
+			<h1 class="secondary-color">Handling Code in&nbsp;the&nbsp;Fast&#8209;changing Technology&nbsp;World</h1>
 		</section>
 		<section>
-			<h2 class="no-text-transform">How does the <mark>Fast&#8209;changing&nbsp;Technology&nbsp;World</mark> influence our applications being developed?</h2>
+			<section>
+				<h4 class="primary-color">What I mean with</h4>
+				<h2><mark>handling&nbsp;code&nbsp;well</mark> is...</h2>
+				<h2>...writing <mark>maintainable code</mark></h2>
+			</section>
+			<section>
+				<h4>Let's rephrase the title:</h4>
+				<h2 class="no-text-transform secondary-color"><span style="text-decoration: line-through">Handling</span> <mark>Writing Maintainable</mark> Code in&nbsp;the&nbsp;Fast&#8209;changing Technology&nbsp;World</h2>
+			</section>
 		</section>
 		<section>
-			<ul>
-				<li>good design makes the code maintainable (easier to evolve the software into the future) / improves the stamina of your project</li>
-				<li>good design doesn’t make programming more effective (doesn’t increase productivity)</li>
-			</ul>
+			<section>
+				<h2 class="primary-color">How does the <mark>Fast&#8209;changing&nbsp;Technology&nbsp;World</mark> influence the applications we develop?</h2>
+			</section>
+			<section>
+				<ul>
+					<li>new technical APIs -> more adapters</li>
+					<li>more components -> more distributed / complex also resilient, scalable / asynchronous / event driven / streams</li>
+					<li>You're talking about <mark>microservices</mark>, aren't you?</li>
+					<li>more control over resources used / pay for value /  (Sustainability/ carbon footprint)</li>
+					<li>You're talking about <mark>serverless</mark>, right?</li>
+				</ul>
+			</section>
+			<section>
+				<p>(...) is all about changing the way you think about building and designing <mark>critical business systems</mark>
+					<small><a href="https://www.capgemini.com/insights/expert-perspectives/thinking-cloud-native/" target="_blank">Capgemini&nbsp;Insights</a></small></p>
+				<p class="fragment">(...) Technologies such as containers, <mark>microservices</mark>, <mark>serverless</mark> functions and immutable infrastructure, deployed via declarative code are common elements of this architectural style
+					<small><a href="https://en.wikipedia.org/wiki/Cloud_native_computing" target="_blank">Wikipedia</a></small></p>
+				<p class="fragment">(...) applications that exploits the flexibility, scalability, and <mark>resilience</mark> of <mark>cloud</mark> computing
+					<small><a href="https://www.infoworld.com/article/3281046/what-is-cloud-native-the-modern-way-to-develop-software.html" target="_blank">InfoWorld</a></small></p>
+			</section>
+			<section>
+				<h4>Let's rephrase the title (again):</h4>
+				<h2 class="no-text-transform secondary-color">Writing Maintainable Code in <span style="text-decoration: line-through">the&nbsp;Fast&#8209;changing Technology&nbsp;World</span>&nbsp;<mark>Cloud Native Applications</mark></h2>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2 class="primary-color">How to write <mark>maintainable code</mark>?</h2>
+			</section>
+			<section id="designStamina">
+				<div>
+					<h3><a href="https://martinfowler.com/bliki/DesignStaminaHypothesis.html" target="_blank">Design Stamina Hypothesis, M. Fowler</a></h3>
+					<object height="450" data="assets/design-stamina-graph.svg"></object>
+				</div>
+			</section>
+			<section id="designStaminaKeyTakeaways">
+				<h3 class="title secondary-color">
+					<object width="200" data="assets/design-stamina-graph.svg"></object>&nbsp;Key takeaways:
+				</h3>
+				<ul>
+					<li><mark>Good design</mark> makes code maintainable</li>
+					<li>Good design does not increase productivity</li>
+					<li>You can save short-term time by neglecting design (producing technical debt, though)</li>
+				</ul>
+			</section>
+			<section>
+				<h3><mark>Good architecture</mark> <span class="primary-color">makes the code maintainable too :)</span></h3>
+				<ul>
+					<li>Good architecture separates concerns well</li>
+					<li>Key point is to keep business code separated from technical one</li>
+					<li>Business code is getting older slower than the technical one</li>
+				</ul>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2 class="primary-color">What architecture is good for <mark>cloud&nbsp;native&nbsp;apps</mark>?</h2>
+			</section>
+			<section id="layeredArchitecture">
+				<div>
+					<p>The <mark>layered architecture</mark> promotes database&#8209;driven design, is prone to shortcuts, hides use cases, etc.</p>
+					<a href="https://reflectoring.io/book/" target="_blank"><img alt="T. Hombergs, Get Your Hands Dirty on Clean Architecture" width="300" src="assets/hombergs-get-your-cover.png"></a>
+				</div>
+				<p class="no-margin">However, if customized, it <mark>can still work well</mark>:</p>
+				<object height="250" data="assets/layered-architecture.svg"></object>
+			</section>
+			<section id="hexArchitecture">
+				<h3 class="primary-color">For <mark>cloud native apps</mark> we need to make the next step...</h3>
+				<div class="galileo-einstein">
+					<span>...from&nbsp;Galileo</span>
+					<img alt="Galileo" height="180" src="assets/galileo.jpg">
+					<span>...to&nbsp;Einstein</span>
+					<img alt="Einstein" height="180" src="assets/einstein.jpeg">
+				</div>
+				<div class="attribution">
+					<span>Attribution:</span>
+					<a href="https://commons.wikimedia.org/wiki/File:Albert_Einstein_Head.jpg">Einstein: Photograph by Orren Jack Turner, Princeton, N.J. Modified with Photoshop by PM_Poon and later by Dantadd. Public domain, via Wikimedia Commons</a>
+					<a href="https://commons.wikimedia.org/wiki/File:Justus_Sustermans_-_Portrait_of_Galileo_Galilei,_1636.jpg">Galileo: Justus Sustermans. Public domain, via Wikimedia Commons</a>
+				</div>
+			</section>
+			<section>
+				<div>
+					<img height="450" alt="Hexagonal Architecture" src="assets/hex-architecture.png">
+					<a href="https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/" target="_blank"><small>Herberto Graça, Software Architecture Chronicles</small></a>
+				</div>
+			</section>
+			<section>
+				<h3 class="secondary-color"><mark>Infrastructure Architecture</mark> does matter in cloud native apps more than ever</h3>
+				<ul>
+					<li class="primary-color">Speak cloud like natives do!</li>
+					<li>Architect your infrastructure with <a class="green-color" href="https://www.capgemini.com/insights/leading-sustainability/" target="_blank">sustainability in mind</a></li>
+					<li>Have you heard about <a class="green-color" href="https://www.capgemini.com/insights/expert-perspectives/green-software-engineering-back-to-the-roots/">green software engineering?</a></li>
+				</ul>
+			</section>
+			<section>
+				<object height="450" data="assets/towards-cloud-native.svg"></object>
+			</section>
+			<section>
+				<object height="500" data="assets/aws-cloud-native.svg"></object>
+			</section>
+			<section id="sustainability">
+				<p>You're waiting, but you're saving our planet :)</p>
+				<div class="lds-hourglass"></div>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3 class="secondary-color">Programming concepts in <mark>cloud native apps</mark>?</h3>
+				<ul>
+					<li>Asynchronous, functional, reactive</li>
+					<li>Bringing developers to the next level of Java</li>
+					<li>Example Spring's RestTemplate vs Web Client</li>
+				</ul>
+			</section>
+		</section>
+		<section id="end">
+			<h2 class="secondary-color">Thank you for you attention!</h2>
+			<div>
+				<img alt="QR Code to get this slides" src="assets/slides-qr-code.svg">
+				<a href="https://mmatczak-infoshare.github.io/" target="_blank">https://mmatczak-infoshare.github.io/</a>
+			</div>
 		</section>
     </div>
 	<section id="infoshare-logo">
